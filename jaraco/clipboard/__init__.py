@@ -3,7 +3,7 @@ import importlib
 import itertools
 
 _platform_mod_name = '.' + platform.system()
-_platform_mod = importlib.import_module(_platform_mod_name, package=__package__)
+_platform_mod = importlib.import_module(_platform_mod_name, 'jaraco.clipboard')
 
 # support copy and paste of text, html, and image.
 _modes = 'copy', 'paste'
