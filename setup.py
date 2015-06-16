@@ -28,6 +28,10 @@ setup_params = dict(
 	namespace_packages=['jaraco'],
 	install_requires=[
 	],
+	extras_require={
+		':sys_platform=="win32"': 'jaraco.windows>=3.4',
+		':sys_platform=="darwin"': 'richxerox',
+	},
 	setup_requires=[
 		'setuptools_scm',
 	] + pytest_runner + sphinx,
