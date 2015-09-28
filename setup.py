@@ -4,6 +4,7 @@
 
 import io
 import sys
+import itertools
 
 import setuptools
 
@@ -14,6 +15,12 @@ needs_pytest = {'pytest', 'test'}.intersection(sys.argv)
 pytest_runner = ['pytest_runner'] if needs_pytest else []
 needs_sphinx = {'release', 'build_sphinx', 'upload_docs'}.intersection(sys.argv)
 sphinx = ['sphinx'] if needs_sphinx else []
+
+# richxerox has invalid versions in PyPI, so exclude them
+# https://bitbucket.org/jeunice/richxerox/issues/2
+bad_versions = itertools.chain(range(1,12), [127, 128])
+bad_version_specs = map('!=0.{0:02d}'.format, bad_versions)
+richxerox = 'richxerox' + ','.join(bad_version_specs)
 
 setup_params = dict(
 	name='jaraco.clipboard',
@@ -30,7 +37,7 @@ setup_params = dict(
 	],
 	extras_require={
 		':sys_platform=="win32"': 'jaraco.windows>=3.4',
-		':sys_platform=="darwin"': 'richxerox',
+		':sys_platform=="darwin"': richxerox,
 	},
 	setup_requires=[
 		'setuptools_scm',
