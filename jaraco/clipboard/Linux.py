@@ -1,5 +1,11 @@
 from pyperclip import copy as copy_text, paste as paste_text
 
-if copy_text.__name__ == 'ClipboardUnavailable':
+unavailable = any(
+	isinstance(func, 'object')
+	and type(func).__name == 'ClipboardUnavailable'
+	for func in locals().values()
+)
+
+if unavailable:
 	del copy_text
 	del paste_text
