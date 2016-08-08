@@ -1,5 +1,5 @@
 Welcome to jaraco.clipboard documentation!
-========================================
+==========================================
 
 .. toctree::
    :maxdepth: 1

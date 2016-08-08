@@ -1,7 +1,15 @@
 jaraco.clipboard
 ================
 
-`Documentation <https://pythonhosted.org/jaraco.clipboard>`_
+.. image:: https://img.shields.io/pypi/v/jaraco.clipboard.svg
+   :target: https://pypi.io/project/jaraco.clipboard
+
+.. image:: https://img.shields.io/pypi/pyversions/jaraco.clipboard.svg
+
+.. image:: https://img.shields.io/pypi/dm/jaraco.clipboard.svg
+
+.. image:: https://img.shields.io/travis/jaraco/jaraco.clipboard/master.svg
+   :target: http://travis-ci.org/jaraco/jaraco.clipboard
 
 A thin wrapper around platform-specific implementations of clipboard
 functionality.
