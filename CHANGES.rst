@@ -1,3 +1,9 @@
+1.2
+===
+
+Added test suite and automated deployments for tagged
+commits.
+
 1.1
 ===
 
