@@ -1,3 +1,8 @@
+1.3
+===
+
+Add support for copy/paste text on Linux via pyperclip.
+
 1.2
 ===
 
