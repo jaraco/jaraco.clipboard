@@ -43,7 +43,7 @@ setup_params = dict(
 	extras_require={
 		':sys_platform=="win32"': 'jaraco.windows>=3.4',
 		':sys_platform=="darwin"': richxerox,
-		':sys_platform=="linux2" or sys.platform=="linux"': "pyperclip",
+		':sys_platform=="linux2" or sys_platform=="linux"': "pyperclip",
 	},
 	setup_requires=[
 		'setuptools_scm>=1.9',
