@@ -11,13 +11,20 @@ jaraco.clipboard
 .. image:: https://img.shields.io/travis/jaraco/jaraco.clipboard/master.svg
    :target: http://travis-ci.org/jaraco/jaraco.clipboard
 
-A thin wrapper around platform-specific implementations of clipboard
-functionality.
+The only clipboard library for Python that supports text on all
+three major platforms plus HTML on MacOS and HTML and images
+on Windows.
 
 Similar to `pyperclip <https://pypi.python.org/pypi/pyperclip/>`_
 and `clipboard <https://pypi.python.org/pypi/clipboard/>`_
 and `xerox <https://pypi.python.org/pypi/xerox/>`_ except attempts
 to support more formats than just text.
+
+This library is just a thin wrapper around the best platform implementations:
+
+ - pyperclip for Linux
+ - richxerox for MacOS
+ - jaraco.windows for Windows
 
 Usage
 =====
