@@ -1,6 +1,3 @@
-jaraco.clipboard
-================
-
 .. image:: https://img.shields.io/pypi/v/jaraco.clipboard.svg
    :target: https://pypi.io/project/jaraco.clipboard
 
@@ -25,6 +22,13 @@ This library is just a thin wrapper around the best platform implementations:
  - pyperclip for Linux
  - richxerox for MacOS
  - jaraco.windows for Windows
+
+License
+=======
+
+License is indicated in the project metadata (typically one or more
+of the Trove classifiers). For more details, see `this explanation
+<https://github.com/jaraco/skeleton/issues/1>`_.
 
 Usage
 =====
