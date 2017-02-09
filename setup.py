@@ -3,6 +3,7 @@
 # Project skeleton maintained at https://github.com/jaraco/skeleton
 
 import io
+import itertools
 
 import setuptools
 
