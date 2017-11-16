@@ -10,6 +10,12 @@ import setuptools
 with io.open('README.rst', encoding='utf-8') as readme:
 	long_description = readme.read()
 
+# richxerox has invalid versions in PyPI, so exclude them
+# https://bitbucket.org/jeunice/richxerox/issues/2
+bad_versions = itertools.chain(range(1, 12), [127, 128])
+bad_version_specs = map('!=0.{0:02d}'.format, bad_versions)
+richxerox = 'richxerox' + ','.join(bad_version_specs)
+
 name = 'jaraco.clipboard'
 description = 'Multi-format, cross-platform clipboard library'
 nspkg_technique = 'managed'
