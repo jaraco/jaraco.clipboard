@@ -3,18 +3,11 @@
 # Project skeleton maintained at https://github.com/jaraco/skeleton
 
 import io
-import itertools
 
 import setuptools
 
 with io.open('README.rst', encoding='utf-8') as readme:
 	long_description = readme.read()
-
-# richxerox has invalid versions in PyPI, so exclude them
-# https://bitbucket.org/jeunice/richxerox/issues/2
-bad_versions = itertools.chain(range(1, 12), [127, 128])
-bad_version_specs = map('!=0.{0:02d}'.format, bad_versions)
-richxerox = 'richxerox' + ','.join(bad_version_specs)
 
 name = 'jaraco.clipboard'
 description = 'Multi-format, cross-platform clipboard library'
@@ -56,7 +49,12 @@ params = dict(
 			'rst.linker>=1.9',
 		],
 		':sys_platform=="win32"': 'jaraco.windows>=3.4',
-		':sys_platform=="darwin"': richxerox,
+		':sys_platform=="darwin"': [
+			'richxerox>=1',
+			# for now, declare the dependency as richxerox doesn't
+			# see https://bitbucket.org/jeunice/richxerox/issues/3
+			'pyobjc',
+		],
 		':sys_platform=="linux2" or sys_platform=="linux"': "pyperclip",
 	},
 	setup_requires=[
