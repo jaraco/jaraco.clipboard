@@ -48,14 +48,18 @@ params = dict(
 			'jaraco.packaging>=3.2',
 			'rst.linker>=1.9',
 		],
-		':sys_platform=="win32"': 'jaraco.windows>=3.4',
+		':sys_platform=="win32"': [
+			'jaraco.windows>=3.4',
+		],
 		':sys_platform=="darwin"': [
 			'richxerox>=1',
 			# for now, declare the dependency as richxerox doesn't
 			# see https://bitbucket.org/jeunice/richxerox/issues/3
 			'pyobjc',
 		],
-		':sys_platform=="linux2" or sys_platform=="linux"': "pyperclip",
+		':sys_platform=="linux2" or sys_platform=="linux"': [
+			"pyperclip>=1.6",
+		],
 	},
 	setup_requires=[
 		'setuptools_scm>=1.15.0',
