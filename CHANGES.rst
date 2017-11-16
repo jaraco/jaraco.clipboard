@@ -3,6 +3,10 @@
 
 Refresh packaging.
 
+Update dependency declaration on richxerox.
+
+Update dependency on pyperclip and fix usage.
+
 1.3.1
 =====
 
