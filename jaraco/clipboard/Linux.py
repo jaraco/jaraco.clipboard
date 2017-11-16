@@ -1,4 +1,6 @@
-from pyperclip import copy as copy_text, paste as paste_text
+import pyperclip
+
+copy_text, paste_text = pyperclip.determine_clipboard()
 
 unavailable = any(
 	isinstance(func, object)
