@@ -10,11 +10,13 @@ import setuptools
 with io.open('README.rst', encoding='utf-8') as readme:
 	long_description = readme.read()
 
-# richxerox has invalid versions in PyPI, so exclude them
-# https://bitbucket.org/jeunice/richxerox/issues/2
-bad_versions = itertools.chain(range(1,12), [127, 128])
-bad_version_specs = map('!=0.{0:02d}'.format, bad_versions)
-richxerox = 'richxerox' + ','.join(bad_version_specs)
+name = 'jaraco.clipboard'
+description = 'Multi-format, cross-platform clipboard library'
+nspkg_technique = 'managed'
+"""
+Does this package use "native" namespace packages or
+pkg_resources "managed" namespace packages?
+"""
 
 name = 'jaraco.clipboard'
 description = 'Multi-format, cross-platform clipboard library'
@@ -29,10 +31,24 @@ params = dict(
 	url="https://github.com/jaraco/" + name,
 	packages=setuptools.find_packages(),
 	include_package_data=True,
-	namespace_packages=name.split('.')[:-1],
+	namespace_packages=(
+		name.split('.')[:-1] if nspkg_technique == 'managed'
+		else []
+	),
+	python_requires='>=2.7',
 	install_requires=[
 	],
 	extras_require={
+		'testing': [
+			'pytest>=2.8',
+			'pytest-sugar',
+			'collective.checkdocs',
+		],
+		'docs': [
+			'sphinx',
+			'jaraco.packaging>=3.2',
+			'rst.linker>=1.9',
+		],
 		':sys_platform=="win32"': 'jaraco.windows>=3.4',
 		':sys_platform=="darwin"': richxerox,
 		':sys_platform=="linux2" or sys_platform=="linux"': "pyperclip",
