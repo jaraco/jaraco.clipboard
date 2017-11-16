@@ -6,7 +6,8 @@ from jaraco import clipboard
 def needs_command(name):
 	cmd = vars(clipboard)[name]
 
-	return pytest.mark.xfail(cmd is clipboard._not_implemented,
+	return pytest.mark.xfail(
+		cmd is clipboard._not_implemented,
 		reason="{name} not implemented on this platform",
 	)
 
