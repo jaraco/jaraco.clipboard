@@ -9,6 +9,11 @@ python:
 jobs:
   fast_finish: true
   include:
+  - os: osx
+    osx_image: xcode9.1
+    language: generic
+    python: *latest_py3
+    before_install: .travis/macOS
   - stage: deploy
     if: tag IS present
     python: *latest_py3
