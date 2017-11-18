@@ -1,3 +1,10 @@
+1.3.3
+=====
+
+Bump to richxerox 1.0.1 for declared dependency on pyobjc.
+
+Run CI tests on macOS and Windows.
+
 1.3.2
 =====
 
