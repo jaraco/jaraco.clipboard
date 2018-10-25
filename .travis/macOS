@@ -1,6 +1,6 @@
 # Perform the manual steps on macOS to install python3 and activate an environment
 brew update
-brew install python3
+brew install python
 rm -f /usr/local/bin/pip
 ln -s python3 /usr/local/bin/python
 ln -s pip3 /usr/local/bin/pip
