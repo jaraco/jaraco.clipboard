@@ -12,9 +12,6 @@ Does this package use "native" namespace packages or
 pkg_resources "managed" namespace packages?
 """
 
-name = 'jaraco.clipboard'
-description = 'Multi-format, cross-platform clipboard library'
-
 params = dict(
 	name=name,
 	use_scm_version=True,
