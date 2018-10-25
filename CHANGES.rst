@@ -1,3 +1,8 @@
+1.3.4
+=====
+
+#3: Fixed paste_html on Windows.
+
 1.3.3
 =====
 
