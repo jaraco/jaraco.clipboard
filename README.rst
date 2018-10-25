@@ -4,10 +4,13 @@
 .. image:: https://img.shields.io/pypi/pyversions/jaraco.clipboard.svg
 
 .. image:: https://img.shields.io/travis/jaraco/jaraco.clipboard/master.svg
-   :target: http://travis-ci.org/jaraco/jaraco.clipboard
+   :target: https://travis-ci.org/jaraco/jaraco.clipboard
+
+.. image:: https://img.shields.io/appveyor/ci/jaraco/jaraco-clipboard/master.svg
+   :target: https://ci.appveyor.com/project/jaraco/jaraco-clipboard/branch/master
 
 .. image:: https://readthedocs.org/projects/jaracoclipboard/badge/?version=latest
-   :target: http://jaracoclipboard.readthedocs.io/en/latest/?badge=latest
+   :target: https://jaracoclipboard.readthedocs.io/en/latest/?badge=latest
 
 The only clipboard library for Python that supports text on all
 three major platforms plus HTML on MacOS and HTML and images
