@@ -22,3 +22,18 @@ def test_paste_text():
     # first ensure there's something on the clipboard:
     clipboard.copy_text('test for paste')
     assert clipboard.paste_text() == 'test for paste'
+
+
+html_sample = '<p>Your paragraph here</p>'
+
+
+@needs_command("copy_html")
+def test_copy_html():
+    clipboard.copy_html(html_sample)
+
+
+@needs_command("paste_html")
+def test_paste_html():
+    # first ensure there's something on the clipboard
+    clipboard.copy_html(html_sample)
+    assert clipboard.paste_html() == html_sample
