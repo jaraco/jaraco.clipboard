@@ -1,3 +1,8 @@
+2.0.1
+=====
+
+#4: Fix usage of richxerox for HTML copy operation on macOS.
+
 2.0
 ===
 
