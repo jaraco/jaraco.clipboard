@@ -32,6 +32,7 @@ def test_copy_html():
     clipboard.copy_html(html_sample)
 
 
+@pytest.mark.xfail('platform.system() == "Windows"', reason="#6")
 @needs_command("paste_html")
 def test_paste_html():
     # first ensure there's something on the clipboard
