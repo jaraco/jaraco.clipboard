@@ -1,3 +1,10 @@
+v3.0.0
+======
+
+#6: Copy/paste HTML now fixed by building on fixes in jaraco.windows.
+
+Require Python 3.6 or later.
+
 2.0.1
 =====
 
