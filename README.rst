@@ -28,15 +28,17 @@ to support more formats than just text.
 
 This library is just a thin wrapper around the best platform implementations:
 
- - pyperclip for Linux
- - richxerox for MacOS
- - jaraco.windows for Windows
+- pyperclip for Linux
+- richxerox for MacOS
+- jaraco.windows for Windows
 
 Usage
 =====
 
 ``jaraco.clipboard`` supplies several functions in the clipboard module.
-The most common are the copy and paste functions::
+The most common are the copy and paste functions:
+
+.. code-block:: python
 
     from jaraco import clipboard
     clipboard.copy('some text')
