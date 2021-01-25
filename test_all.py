@@ -38,3 +38,11 @@ def test_paste_html():
     # first ensure there's something on the clipboard
     clipboard.copy_html(html_sample)
     assert clipboard.paste_html() == html_sample
+
+
+def test_not_implemented():
+    """
+    Execute _not_implemented for coverage.
+    """
+    with pytest.raises(NotImplementedError):
+        clipboard._not_implemented()
