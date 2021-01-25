@@ -1,3 +1,8 @@
+v3.1.0
+======
+
+Switch to native namespace for 'jaraco' package and other refresh.
+
 v3.0.0
 ======
 
