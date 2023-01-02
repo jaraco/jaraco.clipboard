@@ -14,7 +14,7 @@
 .. image:: https://readthedocs.org/projects/jaracoclipboard/badge/?version=latest
    :target: https://jaracoclipboard.readthedocs.io/en/latest/?badge=latest
 
-.. image:: https://img.shields.io/badge/skeleton-2022-informational
+.. image:: https://img.shields.io/badge/skeleton-2023-informational
    :target: https://blog.jaraco.com/skeleton
 
 The only clipboard library for Python that supports text on all
