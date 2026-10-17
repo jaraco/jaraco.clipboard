@@ -1,6 +1,6 @@
-import platform
 import importlib
 import itertools
+import platform
 
 
 def _not_implemented(*args, **kwargs):
